@@ -1,78 +1,78 @@
-Year,States,Value,,
-2010-11,New South Wales,1049.10,,
-2010-11,Victoria,829.40,,
-2010-11,Queensland,858.70,,
-2010-11,Western Australia,702.70,,
-2010-11,South Australia,246.40,,
-2010-11,Tasmania,102.90,,
-2010-11,Northern Territory,77.40,,
-2011-12,New South Wales,1043.40,,
-2011-12,Victoria,840.80,,
-2011-12,Queensland,886.30,,
-2011-12,Western Australia,744.40,,
-2011-12,South Australia,247.20,,
-2011-12,Tasmania,97.20,, 
-2011-12,Northern Territory,75.20,,
-2012-13,New South Wales,1034.60,,
-2012-13,Victoria,843.60,,
-2012-13,Queensland,932.20,,
-2012-13,Western Australia,783.20,,
-2012-13,South Australia,245.10,,
-2012-13,Tasmania,101.90,,
-2012-13,Northern Territory,78.00,,
-2013-14,New South Wales,1029.20,,
-2013-14,Victoria,825.50,,
-2013-14,Queensland,944.30,,
-2013-14,Western Australia,825.30,,
-2013-14,South Australia,241.40,,
-2013-14,Tasmania,100.90,,
-2013-14,Northern Territory,76.20,,
-2014-15,New South Wales,1031.60,,
-2014-15,Victoria,841.50,,
-2014-15,Queensland,967.00,,
-2014-15,Western Australia,805.20,,
-2014-15,South Australia,236.90,,
-2014-15,Tasmania,101.20,,
-2014-15,Northern Territory,58.70,,
-2015-16,New South Wales,1035.60,,
-2015-16,Victoria,830.60,,
-2015-16,Queensland,1028.10,,
-2015-16,Western Australia,823.70,,
-2015-16,South Australia,235.30,,
-2015-16,Tasmania,98.90,,
-2015-16,Northern Territory,59.90,,
-2016-17,New South Wales,1051.30,,
-2016-17,Victoria,822.00,,
-2016-17,Queensland,1076.90,,
-2016-17,Western Australia,885.70,,
-2016-17,South Australia,233.70,,
-2016-17,Tasmania,99.60,,
-2016-17,Northern Territory,58.70,,
-2017-18,New South Wales,1078.80,,
-2017-18,Victoria,832.60,,
-2017-18,Queensland,1093.20,,
-2017-18,Western Australia,927.60,,
-2017-18,South Australia,235.60,,
-2017-18,Tasmania,102.10,,
-2017-18,Northern Territory,62.30,,
-2018-19,New South Wales,1072.80,,
-2018-19,Victoria,840.40,,
-2018-19,Queensland,1082.50,,
-2018-19,Western Australia,952.90,,
-2018-19,South Australia,230.30,,
-2018-19,Tasmania,101.70,,
-2018-19,Northern Territory,97.10,,
-2019-20,New South Wales,1011.50,,
-2019-20,Victoria,798.60,,
-2019-20,Queensland,1052.80,,
-2019-20,Western Australia,948.40,,
-2019-20,South Australia,224.60,,
-2019-20,Tasmania,95.70,,
-2019-20,Northern Territory,111.50,,
-2020-21,New South Wales,958.70,,
-2020-21,Victoria,733.60,,
-2020-21,Queensland,1036.60,,
-2020-21,Western Australia,960.80,,
-2020-21,South Australia,222.60,,
-2020-21,Tasmania,98.70,,
-2020-21,Northern Territory,110.90,,
+Year,States,Value
+2010-11,New South Wales,1049.10
+2010-11,Victoria,829.40
+2010-11,Queensland,858.70
+2010-11,Western Australia,702.70
+2010-11,South Australia,246.40
+2010-11,Tasmania,102.90
+2010-11,Northern Territory,77.40
+2011-12,New South Wales,1043.40
+2011-12,Victoria,840.80
+2011-12,Queensland,886.30
+2011-12,Western Australia,744.40
+2011-12,South Australia,247.20
+2011-12,Tasmania,97.20
+2011-12,Northern Territory,75.20
+2012-13,New South Wales,1034.60
+2012-13,Victoria,843.60
+2012-13,Queensland,932.20
+2012-13,Western Australia,783.20
+2012-13,South Australia,245.10
+2012-13,Tasmania,101.90
+2012-13,Northern Territory,78.00
+2013-14,New South Wales,1029.20
+2013-14,Victoria,825.50
+2013-14,Queensland,944.30
+2013-14,Western Australia,825.30
+2013-14,South Australia,241.40
+2013-14,Tasmania,100.90
+2013-14,Northern Territory,76.20
+2014-15,New South Wales,1031.60
+2014-15,Victoria,841.50
+2014-15,Queensland,967.00
+2014-15,Western Australia,805.20
+2014-15,South Australia,236.90
+2014-15,Tasmania,101.20
+2014-15,Northern Territory,58.70
+2015-16,New South Wales,1035.60
+2015-16,Victoria,830.60
+2015-16,Queensland,1028.10
+2015-16,Western Australia,823.70
+2015-16,South Australia,235.30
+2015-16,Tasmania,98.90
+2015-16,Northern Territory,59.90
+2016-17,New South Wales,1051.30
+2016-17,Victoria,822.00
+2016-17,Queensland,1076.90
+2016-17,Western Australia,885.70
+2016-17,South Australia,233.70
+2016-17,Tasmania,99.60
+2016-17,Northern Territory,58.70
+2017-18,New South Wales,1078.80
+2017-18,Victoria,832.60
+2017-18,Queensland,1093.20
+2017-18,Western Australia,927.60
+2017-18,South Australia,235.60
+2017-18,Tasmania,102.10
+2017-18,Northern Territory,62.30
+2018-19,New South Wales,1072.80
+2018-19,Victoria,840.40
+2018-19,Queensland,1082.50
+2018-19,Western Australia,952.90
+2018-19,South Australia,230.30
+2018-19,Tasmania,101.70
+2018-19,Northern Territory,97.10
+2019-20,New South Wales,1011.50
+2019-20,Victoria,798.60
+2019-20,Queensland,1052.80
+2019-20,Western Australia,948.40
+2019-20,South Australia,224.60
+2019-20,Tasmania,95.70
+2019-20,Northern Territory,111.50
+2020-21,New South Wales,958.70
+2020-21,Victoria,733.60
+2020-21,Queensland,1036.60
+2020-21,Western Australia,960.80
+2020-21,South Australia,222.60
+2020-21,Tasmania,98.70
+2020-21,Northern Territory,110.90
