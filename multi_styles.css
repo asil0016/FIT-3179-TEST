@@ -1,5 +1,5 @@
-body *{
-    font-family: 'Open Sans', sans-serif;
+.body {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1 {
@@ -7,7 +7,7 @@ h1 {
 }
 
 body {
-    background-color: linen;
+    background-color: lightgray;
 }
 
 .page {
@@ -36,7 +36,7 @@ h1 {
 }
 
 .pure-g {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .small-font {
