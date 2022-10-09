@@ -41,7 +41,7 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-2">
+      <div class="pure-u-1-3">
         <div class="description description-left">
           <h2>Total Energy Consumption by States</h2>
           <p>Below is a map visualisation that shows the total energy consumption based on states. There are 7 states in this visualisation and
@@ -49,7 +49,7 @@
           </p>
         </div>
       </div>
-      <div class="pure-u-1-2 ">
+      <div class="pure-u-2-3 ">
         <div id="vis1" class="vis-container"></div>
       </div>
     </div>
@@ -66,192 +66,21 @@
       <div class="pure-u-2-3">
         <div id="vis2" class="vis-container"></div>
       </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis3" class="vis-container" style="margin-left: 15px;"></div>
-      </div>
 
     </div>
     <!-- end pure grid group -->
 
   <script type="text/javascript">
-    var specVis1 = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Total Energy Consumption by States (PJ)",
-    "width": "container",
-    "height": 400,
-    "params": [
-      {
-        "name": "Year_Slider",
-        "value": 2010,
-        "bind": {
-          "input": "range",
-          "min": 2010,
-          "max": 2020,
-          "step": 1,
-          "name": "Year: "
-          }
-        }
-        ],
-        "projection": {"type": "equirectangular"},
-        "layer": [
-          {
-            "data": {
-              "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/map_states.topojson",
-              "format": {"type": "topojson", "feature": "states"}
-            },
-            "transform": [
-              {
-                "calculate": "'Data is not available in ' + datum.properties.STATE_NAME",
-                "as": "note"
-              }
-            ],
-            "mark": {
-              "type": "geoshape",
-              "fill": "#ddd",
-              "stroke": "white",
-              "strokeWidth": 1
-            },
-            "encoding": {"tooltip": {"field": "note"}}
-          },
-          {
-            "data": {
-              "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/Table%20H%20(MAPS).csv"
-            },
-            "transform": [
-              {
-                "lookup": "States",
-                "from": {
-                  "data": {
-                    "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/map_states.topojson",
-                    "format": {
-                      "type": "topojson",
-                      "feature": "states"
-                    }
-                  },
-                  "key": "properties.STATE_NAME"
-                },
-                "as": "geo"
-              },
-              {"filter": "datum.Year == Year_Slider"}
-            ],
-            "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
-            "encoding": {
-              "shape": {"field": "geo", "type": "geojson"},
-              "color": {
-                "field": "Value",
-                "type": "quantitative",
-                "scale": {"scheme":"blues"}
-            },
-            "tooltip": [
-              {"field": "States", "type": "nominal", "title": "State"},
-              {"field": "Value", "type": "quantitative", "title": "Total Energy Consumption (PJ)"}
-            ]
-          }
-        }
-      ],
-      "config": {}
-    };
-    var specVis2 = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height":300,
-  "description": "A simple bar chart with embedded data.",
-  "data": { 
-    "url":"https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/Total%20Energy%20Consumption%20by%20Industry%20hw.csv"
-  },
-  "params":[
-    {
-      "name": "Year_selection",
-      "value": 2010,
-      "bind": {
-        "input": "select",
-        "options": [
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020"
-        ],
-        "labels":[
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020"
-        ],
-        "name": "Year Selection: "
-      }
-    }
-  ],
-  "transform": [
-    {"filter": "datum.Year == Year_selection"}
-  ],
-  "encoding": {
-    "x": {
-      "field": "Industry", 
-      "type": "nominal", 
-      "axis": {"labelAngle": 90},
-      "sort": ["Agriculture","Mining","Manufacturing","Construction", "Transport","Water and waste","Commercial and services", "Residential","Other"]
-      },
-    "y": {
-      "field": "Total Energy Consumption (PJ)", 
-      "type": "quantitative"
-    }
-  },
-  "layer": [
-    {
-      "mark":"bar",
-      "encoding": {
-        "color":{
-          "field": "Industry",
-          "type": "nominal",
-          "scale": {"scheme": "set1"}
-          },
-      "opacity":{"value":1},
-      "tooltip": [
-        {"field": "Industry", "type": "nominal"},
-        {"field": "Total Energy Consumption (PJ)", "type": "quantitative", "format": ","}
-        ]
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "dy": -10,
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "fontStyle": "italic"
-      },
-      "encoding": {
-        "text": {"field": "Total Energy Consumption (PJ)", "type": "quantitative"},
-        "color": {"value": "black"},
-        "opacity": {"value": 1},
-      "tooltip": [
-        {"field": "Industry", "type": "nominal"},
-        {"field": "Total Energy Consumption (PJ)", "type": "quantitative", "format": ","}
-        ]
-      }
-    }
-  ]
-};
+    var specVis1 = "./Energy-map.json";
+    var specVis2 = "./Energy-industry.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
     vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
