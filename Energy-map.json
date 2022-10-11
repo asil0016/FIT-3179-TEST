@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Total Energy Consumption by States (PJ)",
     "width": 725,
     "height": 300,
     "params": [
