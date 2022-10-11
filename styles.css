@@ -12,14 +12,15 @@ body {
 
 .page {
     width: 850px;
-    background-color: white;
+    height: 1500px;
+    background-color: #E5E4E2;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
 }
 
 .vis-container {
-    width: 100%;
+    width: 50%;
 }
 
 .description h2,
