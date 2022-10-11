@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A dual axis chart, created by setting y's scale resolution to `\"independent\"`",
     "width": 750,
     "height":350,
     "background": "azure",
