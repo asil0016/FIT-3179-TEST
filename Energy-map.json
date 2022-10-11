@@ -20,7 +20,7 @@
         "layer": [
           {
             "data": {
-              "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/map_states.topojson",
+              "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/states.json",
               "format": {"type": "topojson", "feature": "states"}
             },
             "transform": [
@@ -39,14 +39,14 @@
           },
           {
             "data": {
-              "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/Table%20H%20(MAPS).csv"
+              "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Table%20H%20(MAPS).csv"
             },
             "transform": [
               {
                 "lookup": "States",
                 "from": {
                   "data": {
-                    "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/map_states.topojson",
+                    "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/states.json",
                     "format": {
                       "type": "topojson",
                       "feature": "states"
