@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
   "height":300,
-  "description": "A simple bar chart with embedded data.",
   "data": { 
     "url":"https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/multiple%20charts/Total%20EnergyConsumption%20by%20Industry%20hw.csv"
   },
