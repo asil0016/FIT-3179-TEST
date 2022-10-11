@@ -4,7 +4,7 @@
   "height":300,
   "background": "azure",
   "data": { 
-    "url":"https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/Homework-Week-10/Total%20Energy%20Consumption%20by%20Industry%20hw.csv"
+    "url":"https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Total%20Energy%20Consumption%20by%20Industry%20hw.csv"
   },
   "params":[
     {
