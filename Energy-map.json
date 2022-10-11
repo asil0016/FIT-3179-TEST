@@ -64,7 +64,7 @@
               "color": {
                 "field": "Value",
                 "type": "quantitative",
-                "scale": {"scheme":"blues"}
+                "scale": {"scheme":"reds"}
             },
             "tooltip": [
               {"field": "States", "type": "nominal", "title": "State"},
