@@ -4,7 +4,7 @@
     "height":300,
     "background": "azure",
     "data": {
-    "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/DatVis2/Table%20B%20(Population%20and%20GSP).csv"
+    "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Table%20B%20(Population%20and%20GDP).csv"
     },
     "params": [
       {
