@@ -49,32 +49,31 @@
           "type": "line",
           "point": {
             "filled": false,
-            "fill": "black"},
-            "color": "#a50f15",
+            "fill": "white"},
+            "color": "#800020",
             "interpolate": "monotone"},
         "encoding": {
           "y": {
             "field": "Energy Consumption",
             "type":"quantitative",
             "title": "Energy Consumption (PJ)",
-            "axis": {"titleColor": "#a50f15"}
+            "axis": {"titleColor": "black"}
           }
         }
       },
       {
         "mark": {
-          "stroke": "#0000FF",
           "type": "line",
           "point": {
             "filled": false,
-            "fill": "black"},
-            "color": "#fc9272",
+            "fill": "white"},
+            "color": "#E97451",
             "interpolate": "monotone"},
         "encoding": {
           "y": {
             "field": "GSP",
             "title": "GSP (Million)",
-            "axis": {"titleColor":"#fc9272"}
+            "axis": {"titleColor":"black"}
           }
         }
       }
