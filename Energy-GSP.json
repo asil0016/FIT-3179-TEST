@@ -1,16 +1,16 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A dual axis chart, created by setting y's scale resolution to `\"independent\"`",
-    "width": 750,
-    "height":350,
-    "background": "azure",
+    "width": 875,
+    "height":650,
+    "background": "#FEFBE7",
     "data": {
       "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Table%20B%20(Population%20and%20GDP).csv"
     },
     "params":[
       {
         "name": "states_selection",
-        "value": 2010,
+        "value": "New South Wales",
         "bind": {
           "input": "select",
           "options": [
@@ -39,7 +39,8 @@
     "encoding": {
       "x": {
         "field": "Year",
-        "type": "nominal"
+        "type": "nominal",
+        "axis": {"labelFontSize":18, "titleFontSize":25, "titleFontWeight":"bold"}
       }
     },
     "layer": [
@@ -48,35 +49,44 @@
           "opacity": 0.5,
           "type": "line",
           "point": {
-            "filled": false,
-            "fill": "white"},
-            "color": "#800020",
-            "interpolate": "monotone"},
+            "filled": true,
+            "fill": "black"},
+            "color": "#ff0008",
+            "interpolate": "natural",
+            "strokeWidth": 5,
+            "tooltip":true
+          },
         "encoding": {
           "y": {
             "field": "Energy Consumption",
             "type":"quantitative",
             "title": "Energy Consumption (PJ)",
-            "axis": {"titleColor": "black"}
+            "axis": {"titleColor": "#ff0008", "labelFontSize":18, "titleFontSize":25, "titleFontWeight":"bold"},
+            "scale":{"type": "linear", "domain": [0,2000]}
           }
         }
       },
       {
         "mark": {
+          "stroke": "#ffc3c3",
           "type": "line",
           "point": {
-            "filled": false,
-            "fill": "white"},
-            "color": "#E97451",
-            "interpolate": "monotone"},
+            "filled": true,
+            "fill": "black"},
+            "color": "#ffc3c3",
+            "interpolate": "natural",
+            "strokeWidth":5,
+            "tooltip":true
+          },
         "encoding": {
           "y": {
             "field": "GSP",
             "title": "GSP (Million)",
-            "axis": {"titleColor":"black"}
+            "axis": {"titleColor":"#ffc3c3","labelFontSize":18, "titleFontSize":25, "titleFontWeight":"bold", "tickCount":10},
+            "scale": {"type": "linear", "domain": [0,700000]}
+            }
           }
         }
-      }
     ],
     "resolve": {"scale": {"y": "independent"}}
   }
