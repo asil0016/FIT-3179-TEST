@@ -1,31 +1,72 @@
-.body {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
 h1 {
-    font-weight: 900;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 90px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
+h2 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+h3 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+p{
+    font-family: 'Lucida Sans', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 body {
-    background-color: lightgray;
+    background-image: url("background_energy.svg");
+    background-repeat: repeat;
+    background-size: 75px 75px;
 }
 
 .page {
-    width: 1200px;
-    height: 2100px;
-    background-color: #E5E4E2;
+    width: 2250px;
+    border-radius: 20px;
+    background-color: #BD9354;
+    margin-top: 100px;
     margin: auto;
+    margin-bottom: 100px;
     padding: 50px;
-    padding-top: 35px;
+    padding-top: 50px;
 }
 
 .vis-container {
     width: 100%;
+    margin-left: 310px;
 }
 
+.vis-container2{
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.vis-container3 {
+    width: 100%;
+    margin-right: 40px;
+}
 .description h2,
 h1 {
-    margin-top: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .description-right {
@@ -38,8 +79,15 @@ h1 {
 
 .pure-g {
     margin-bottom: 25px;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #E3D18A;
 }
 
+
 .small-font {
-    font-size: 14px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
