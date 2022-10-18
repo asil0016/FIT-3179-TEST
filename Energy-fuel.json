@@ -1,14 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height":300,
-    "background": "azure",
+    "width": 860,
+    "height":750,
+    "background": "#FEFBE7",
     "data": {
-      "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/DatVis2/Total%20Energy%20-%20Fuel.csv"
+      "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Total%20Energy%20-%20Fuel.csv"
     },
         "params": [
         {
           "name": "fuel_selection",
+          "value": 2010,
           "bind": {
             "input": "select",
             "options": [
@@ -46,12 +47,12 @@
       ],
     "encoding": {
       "theta": {"field": "Percentage", "type": "quantitative", "stack": true},
-      "color": {"field": "Fuel", "type": "nominal", "legend":null}
+      "color": {"field": "Fuel", "type": "nominal", "legend": {"labelFontSize":18, "titleFontWeight": "bold", "titleFontSize": 25, "title": "Type of Fuel"}}
     },
     "layer": [{
-      "mark": {"type": "arc", "radius": 125, "stroke":"#000", "tooltip": true}
+      "mark": {"type": "arc", "radius": 280, "stroke":"#000", "tooltip": true}
     }, {
-      "mark": {"type": "text", "radius": 137.5},
+      "mark": {"type": "text", "radius": 320, "fontSize": 35},
       "encoding": {
         "text": {"field": "Percentage", "type": "quantitative"}
       }
