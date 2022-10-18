@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height":300,
-  "background": "azure",
+  "width": 900,
+  "height":500,
+  "background": "#FEFBE7",
   "data": { 
     "url":"https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Total%20Energy%20Consumption%20by%20Industry%20hw.csv"
   },
@@ -45,53 +45,63 @@
   "transform": [
     {"filter": "datum.Year == Year_selection"}
   ],
+  "mark":{"type": "bar", "tooltip":true, "stroke":"black"},
   "encoding": {
     "x": {
       "field": "Industry", 
       "type": "nominal", 
-      "axis": {"labelAngle": 90},
-      "sort": ["Agriculture","Mining","Manufacturing","Construction", "Transport","Water and waste","Commercial and services", "Residential","Other"]
+      "axis": {
+        "labelAngle": 45,
+        "labelFontSize": 16,
+        "gridOpacity":0,
+        "domainOpacity":10,
+        "domainColor":"black",
+        "domainDashOffset": 0,
+        "titleFontWeight": "bold",
+        "titleFontSize": 25
+      },
+      "sort": "-y"
       },
     "y": {
       "field": "Total Energy Consumption (PJ)", 
-      "type": "quantitative"
-    }
-  },
-  "layer": [
-    {
-      "mark":"bar",
-      "encoding": {
-        "color":{
-          "field": "Industry",
-          "type": "nominal",
-          "scale": {"scheme": "set1"}
-          },
-      "opacity":{"value":1},
-      "tooltip": [
-        {"field": "Industry", "type": "nominal"},
-        {"field": "Total Energy Consumption (PJ)", "type": "quantitative", "format": ","}
-        ]
+      "type": "quantitative",
+      "axis": {
+        "labelFontSize": 16, 
+        "gridOpacity":0, 
+        "domainOpacity":10,
+        "domainColor":"black",
+        "titleFontWeight": "bold",
+        "titleFontSize": 25
       }
     },
-    {
-      "mark": {
-        "type": "text",
-        "align": "center",
-        "baseline": "middle",
-        "dy": -10,
-        "fontSize": 12,
-        "fontWeight": "bold",
-        "fontStyle": "italic"
-      },
-      "encoding": {
-        "text": {"field": "Total Energy Consumption (PJ)", "type": "quantitative"},
-        "color": {"value": "black"},
-        "opacity": {"value": 1},
-      "tooltip": [
-        {"field": "Industry", "type": "nominal"},
-        {"field": "Total Energy Consumption (PJ)", "type": "quantitative", "format": ","}
+    "color": {
+      "field": "Industry",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Agriculture",
+          "Manufacturing",
+          "Residential",
+          "Mining",
+          "Commercial and services",
+          "Other",
+          "Construction",
+          "Water and waste",
+          "Transport"
+        ],
+        "range": [
+          "#E3D18A",
+          "#E3D18A",
+          "#E3D18A",
+          "#E3D18A",
+          "#E3D18A",
+          "#E3D18A",
+          "#E3D18A",
+          "#E3D18A",
+          "#b21218"
         ]
-      }
+      },
+      "legend": null
     }
-  ]
+  }
 }
