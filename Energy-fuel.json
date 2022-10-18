@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 860,
+    "height":750,
+    "background": "#FEFBE7",
+    "data": {
+      "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Total%20Energy%20-%20Fuel.csv"
+    },
+        "params": [
+        {
+          "name": "fuel_selection",
+          "value": 2010,
+          "bind": {
+            "input": "select",
+            "options": [
+              "2010",
+              "2011",
+              "2012",
+              "2013",
+              "2014",
+              "2015",
+              "2016",
+              "2017",
+              "2018",
+              "2019",
+              "2020"
+            ],
+            "labels": [
+              "2010",
+              "2011",
+              "2012",
+              "2013",
+              "2014",
+              "2015",
+              "2016",
+              "2017",
+              "2018",
+              "2019",
+              "2020"
+            ],
+            "name": "Year: "
+          }
+        }
+      ],
+      "transform": [
+          {"filter": "datum.Year == fuel_selection"} 
+      ],
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative", "stack": true},
+      "color": {"field": "Fuel", "type": "nominal", "legend": {"labelFontSize":18, "titleFontWeight": "bold", "titleFontSize": 25, "title": "Type of Fuel"}}
+    },
+    "layer": [{
+      "mark": {"type": "arc", "radius": 280, "stroke":"#000", "tooltip": true}
+    }, {
+      "mark": {"type": "text", "radius": 320, "fontSize": 35},
+      "encoding": {
+        "text": {"field": "Percentage", "type": "quantitative"}
+      }
+    }]
+  }

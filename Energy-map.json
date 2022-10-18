@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1400,
+  "height": 900,
+  "background": "#FEFBE7",
+  "params": [
+    {
+      "name": "Year_Slider",
+      "value": 2010,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2020,
+        "step": 1,
+        "name": "Year: "
+        }
+      }
+      ],
+      "projection": {"type": "equirectangular"},
+      "layer": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/map_states.topojson",
+            "format": {"type": "topojson", "feature": "states"}
+          },
+          "transform": [
+            {
+              "calculate": "'Data is not available in ' + datum.properties.STATE_NAME",
+              "as": "note"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "#ddd",
+            "stroke": "white",
+            "strokeWidth": 1
+          },
+          "encoding": {"tooltip": {"field": "note"}}
+          
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/Table%20H%20(MAPS).csv"
+          },
+          "transform": [
+            {
+              "lookup": "States",
+              "from": {
+                "data": {
+                  "url": "https://raw.githubusercontent.com/asil0016/FIT-3179-TEST/main/map_states.topojson",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "states"
+                  }
+                },
+                "key": "properties.STATE_NAME"
+              },
+              "as": "geo"
+            },
+            {"filter": "datum.Year == Year_Slider"}
+          ],
+          "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 1},
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "Value",
+              "type": "quantitative",
+              "scale": {"scheme": "reds"},
+              "legend": {
+                "titleFontSize": 25,
+                "titleFontWeight":"bold",
+                "title": "Energy (PJ)",
+                "labelFontSize":18}
+              },
+          "tooltip": [
+            {"field": "States", "type": "nominal", "title": "State"},
+            {"field": "Value", "type": "quantitative", "title": "Total Energy Consumption (PJ)"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text"
+        },
+        "encoding": {
+          "text": {"field": "States", "type": "nominal"},
+          "color":{"value": "black"},
+          "opacity":{"value":1}
+        }
+      }
+    ],
+    "config": {}
+  }
+  
